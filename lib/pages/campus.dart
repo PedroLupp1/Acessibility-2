@@ -90,8 +90,12 @@ class _CampusState extends State<Campus> {
     _redirecionarParaTela('/disciplinas');
   }
 
-  void _accessPlayer() {
-    _redirecionarParaTela('/player');
+  void _accessCampusBarcelona() {
+    _redirecionarParaTela('/campusbarcelona');
+  }
+
+    void _accessCampusCentro() {
+    _redirecionarParaTela('/campuscentro');
   }
 
   void _exit() {
@@ -104,7 +108,7 @@ class _CampusState extends State<Campus> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Outro Campus"),
+        title: const Text("Outros Campus"),
         backgroundColor: const Color(0xffd9d9d9),
         titleTextStyle: const TextStyle(color: Color.fromARGB(255, 231, 95, 4), fontSize: 24),
       ),
@@ -219,7 +223,7 @@ class _CampusState extends State<Campus> {
                 primary: config.Colors.primary1,
                 onPrimary: config.Colors.primary2,
               ),
-              onPressed: _accessPlayer,
+              onPressed: _accessCampusBarcelona,
               child: Text('Campus Barcelona'), // Texto personalizável
             ),
           ),
@@ -231,7 +235,7 @@ class _CampusState extends State<Campus> {
                 primary: config.Colors.primary1,
                 onPrimary: config.Colors.primary2,
               ),
-              onPressed: _accessPlayer,
+              onPressed: _accessCampusCentro,
               child: Text('Campus Centro'), // Texto personalizável
             ),
           ),

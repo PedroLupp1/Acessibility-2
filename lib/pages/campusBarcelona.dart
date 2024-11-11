@@ -4,14 +4,14 @@ import 'package:crob_project/services/auth_service.dart';
 import 'package:go_router/go_router.dart';
 import '../config.dart' as config;
 
-class DashBoard extends StatefulWidget {
-  const DashBoard({Key? key});
+class CampusBarcelona extends StatefulWidget {
+  const CampusBarcelona({Key? key});
 
   @override
-  State<DashBoard> createState() => _DashBoardState();
+  State<CampusBarcelona> createState() => _CampusBarcelona();
 }
 
-class _DashBoardState extends State<DashBoard> {
+class _CampusBarcelona extends State<CampusBarcelona> {
   @override
   void _redirecionarParaTela(String rota) {
     GoRouter.of(context).pushReplacement(rota);
@@ -25,18 +25,21 @@ class _DashBoardState extends State<DashBoard> {
     _redirecionarParaTela('/campus');
   }
 
+  void _accessDashboard2(){
+    _redirecionarParaTela('/dashboard2');
+  }
+
   void _accessDisciplina() {
     _redirecionarParaTela('/disciplinas');
   }
 
-    void _accessDashboard() {
-    _redirecionarParaTela('/dashboard');
-  }
-
-
   Future<void> _exit() async {
     await AuthService().logout();
     navigation();
+  }
+
+     void _accessDashboard() {
+    _redirecionarParaTela('/dashboard');
   }
 
   void navigation() {
@@ -50,7 +53,7 @@ class _DashBoardState extends State<DashBoard> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Mapa do Campus"),
+        title: const Text("Campus Barcelona"),
         backgroundColor: config.Colors.primary2,
         titleTextStyle:
             const TextStyle(color: config.Colors.primary1, fontSize: 24),
@@ -91,7 +94,7 @@ class _DashBoardState extends State<DashBoard> {
                 highlightSelectedColor: config.Colors.primary2,
                 hoverColor: config.Colors.primary2,
                 isSelected: true,
-                onTap: () {},
+                onTap: _accessDashboard,
                 title: 'Home',
                 icon: const Icon(Icons.home),
               ),
@@ -158,7 +161,7 @@ class _DashBoardState extends State<DashBoard> {
                       margin: const EdgeInsets.all(10),
                       width: MediaQuery.of(context).size.width * 0.5,
                       child: Image.asset(
-                        'images/planta.jpeg',
+                        'images/sala-pim.jpeg',
                         fit: BoxFit.cover,
                       )),
                 ),
@@ -167,7 +170,7 @@ class _DashBoardState extends State<DashBoard> {
                       margin: const EdgeInsets.all(10),
                       width: MediaQuery.of(context).size.width * 0.255,
                       child: const Text(
-                        'Campus Conceição',
+                        'Campus Barcelona',
                         style: TextStyle(
                           fontStyle: FontStyle.normal,
                           fontWeight: FontWeight.bold,

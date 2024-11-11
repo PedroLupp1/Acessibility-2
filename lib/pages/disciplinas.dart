@@ -74,6 +74,11 @@ class _DisciplinasState extends State<Disciplinas> {
     GoRouter.of(context).pushReplacement(rota);
   }
 
+   void _accessDashboard2(){
+    _redirecionarParaTela('/dashboard2');
+  }
+
+
   void _back() {
     _redirecionarParaTela("/dashboard");
   }
@@ -144,7 +149,7 @@ class _DisciplinasState extends State<Disciplinas> {
                           title: 'Home',
                           icon: const Icon(Icons.home),
                         ),
-                        SideMenuItemDataTile(
+                        /*SideMenuItemDataTile(
                           margin: const EdgeInsetsDirectional.only(
                               top: 7, bottom: 7),
                           titleStyle:
@@ -157,7 +162,7 @@ class _DisciplinasState extends State<Disciplinas> {
                           onTap: _accessDados,
                           title: 'Dados',
                           icon: const Icon(Icons.person),
-                        ),
+                        ),*/
                         SideMenuItemDataTile(
                           margin: const EdgeInsetsDirectional.only(
                               top: 7, bottom: 7),
@@ -221,7 +226,7 @@ class _DisciplinasState extends State<Disciplinas> {
                   color: config.Colors.primary2,
                 )),
               ),
-              onPressed: _accessPlayer,
+              onPressed: _accessDashboard2,
               child: Text(turma['nome'].toString()),
             ),
           );

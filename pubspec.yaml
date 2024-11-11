@@ -52,6 +52,7 @@ dependencies:
   go_router: ^10.1.2
   flutter_cache_manager: ^3.3.1
   cached_network_image: ^3.3.0
+
   
 
 dev_dependencies:
@@ -81,9 +82,12 @@ flutter:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
   assets:
-    - images/logoCrobTransparente.png
+    - images/planta.jpeg
     - images/mapa.png
     - images/logo-pim.png
+    - images/sala-pim.jpeg
+    
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

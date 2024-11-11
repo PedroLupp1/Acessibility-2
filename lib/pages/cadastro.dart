@@ -105,7 +105,7 @@ class _CadastroState extends State<Cadastro> {
                       onPressed: () {
                         singUp(emailController.text, senhaController.text, nomeController.text, localController.text); // Update role as needed
                       },
-                      child: const Text("Cadastrar"),
+                      child: const Text("Cadastrar", style: TextStyle(color: config.Colors.primary2),),
                     ),
                    
                     ),
@@ -119,7 +119,7 @@ class _CadastroState extends State<Cadastro> {
                             .Colors.primary1),
                       ),
                       onPressed: _exit,
-                      child: const Text("Já possuo cadastro"),
+                      child: const Text("Já possuo cadastro", style: TextStyle(color: config.Colors.primary2),),
                     ),
                    
                   ],
