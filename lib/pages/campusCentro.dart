@@ -161,7 +161,7 @@ class _CampusCentro extends State<CampusCentro> {
                       margin: const EdgeInsets.all(10),
                       width: MediaQuery.of(context).size.width * 0.5,
                       child: Image.asset(
-                        'images/sala-pim.jpeg',
+                        'images/campusCentro.jpeg',
                         fit: BoxFit.cover,
                       )),
                 ),

@@ -161,7 +161,7 @@ class _CampusBarcelona extends State<CampusBarcelona> {
                       margin: const EdgeInsets.all(10),
                       width: MediaQuery.of(context).size.width * 0.5,
                       child: Image.asset(
-                        'images/sala-pim.jpeg',
+                        'images/barcelona.jpeg',
                         fit: BoxFit.cover,
                       )),
                 ),
